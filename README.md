@@ -11,18 +11,22 @@
 
 This is the official implementation of the paper "FaceOff: A Video-to-Video Face Swapping System" **published** at WACV 2023.
 
+<img src="./results/v2v_faceswapping_looped2.gif">
+<img src="./results/v2v_results3.gif">
+<img src="./results/v2v_more_result.gif">
+
 For more results, information, and details visit our [**project page**](http://cvit.iiit.ac.in/research/projects/cvit-projects/faceoff) and read our [**paper**](https://openaccess.thecvf.com/content/WACV2023/papers/Agarwal_FaceOff_A_Video-to-Video_Face_Swapping_System_WACV_2023_paper.pdf). Following are some outputs from our network on the V2V Face Swapping Task.
 
-<img src="./results/v2v_results3.gif">
-<img src="./results/v2v_faceswapping_looped2.gif">
-<img src="./results/v2v_more_result.gif">
 
 ## Results on same identity
 <img src="./results/v2v_same_identity2.gif">
 
-## Comparisons 
+<!-- ## Comparisons 
+
+We compare our method against two SOTA face-swapping systems, FSGAN and Motion Co-Seg
+
 <img src="./results/v2v_comparisons1.gif">
-<img src="./results/v2v_comparisons31.gif">
+<img src="./results/v2v_comparisons31.gif"> -->
 
 ## Getting started
 
@@ -71,7 +75,14 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python train_faceoff_perceptual.py
 
 ## We would love your contributions to improve FaceOff
 
-FaceOff introduces the novel task of Video-to-Video Face Swapping that tackles a pressing challenge in the moviemaking industry: swapping the actor's face and expressions on the face of their body double. Existing face-swapping methods swap only the identity of the source face without swapping the source (actor) expressions which is undesirable as the starring actor's source expressions are paramount. In video-to-video face swapping, we swap the source's facial expressions along with the identity on the target's background and pose. Our method retains the face and expressions of the source actor and the pose and background information of the target actor. Currently, our model has a few limitations - i) it cannot generate samples of very high-quality, which is typically required in the movie-making industry, ii) there are noticeable temporal jitters in some of the examples, and iii) although FaceOff is designed for the movie-making industry, it would be nice to handle extreme pose variations. ***we would like to strongly encourage contributions and spur further research into some of the limitations listed above.***
+FaceOff introduces the novel task of Video-to-Video Face Swapping that tackles a pressing challenge in the moviemaking industry: swapping the actor's face and expressions on the face of their body double. Existing face-swapping methods swap only the identity of the source face without swapping the source (actor) expressions which is undesirable as the starring actor's source expressions are paramount. In video-to-video face swapping, we swap the source's facial expressions along with the identity on the target's background and pose. Our method retains the face and expressions of the source actor and the pose and background information of the target actor. Currently, our model has a few limitations. ***we would like to strongly encourage contributions and spur further research into some of the limitations listed above.***
+
+1. **Video Quality**: FaceOff is based on combining the temporal motion of the source and the target face videos in the reduced space of a vector quantized variational autoencoder. Consequently, it suffers from a few quality issues and the output resolution is limited to 256x256. Generating samples of very high-quality is typically required in the movie-making industry. 
+
+2. **Temporal Jitter**: Although the 3Dconv modules get rid of most of the temporal jitters in the blended output, there are a few noticeable temporal jitters that require attention. The temporal jitters occur as we try to photo-realistically blend two different motions (source and target) in a temporally coherent manner. 
+
+3. **Extreme Poses**: FaceOff was designed to face-swap actor's face and expressions with the double's pose and background information. Consequently, it is expected that the pose difference between the source and the target actors won't be extreme. FaceOff can solve **roll** related rotations in the 2D space, it would be worth investigating fixing rotations due to **yaw** and **pitch** in the 3D space and render the output back to the 2D space. 
+
 
 ## Thanks
 
