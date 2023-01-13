@@ -11,14 +11,14 @@
 
 This is the official implementation of the paper "FaceOff: A Video-to-Video Face Swapping System" **published** at WACV 2023.
 
-For more results, information, and details visit our [**project page**](http://cvit.iiit.ac.in/research/projects/cvit-projects/faceoff) and read our [**paper**](https://openaccess.thecvf.com/content/WACV2023/papers/Agarwal_FaceOff_A_Video-to-Video_Face_Swapping_System_WACV_2023_paper.pdf)). Following are some outputs from our network on the V2V Face Swapping Task.
+For more results, information, and details visit our [**project page**](http://cvit.iiit.ac.in/research/projects/cvit-projects/faceoff) and read our [**paper**](https://openaccess.thecvf.com/content/WACV2023/papers/Agarwal_FaceOff_A_Video-to-Video_Face_Swapping_System_WACV_2023_paper.pdf). Following are some outputs from our network on the V2V Face Swapping Task.
 
 <img src="./results/v2v_results3.gif">
-<img src="./results/v2v_results4.gif">
+<img src="./results/v2v_faceswapping_looped2.gif">
 <img src="./results/v2v_more_result.gif">
 
 ## Results on same identity
-<img src="./results/v2v_same_identity2.gift">
+<img src="./results/v2v_same_identity2.gif">
 
 ## Comparisons 
 <img src="./results/v2v_comparisons1.gif">
