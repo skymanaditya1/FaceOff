@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=1 python train_video_vqvae.py --epoch 20000 --ckpt vqvae_068.pt
+
+CUDA_VISIBLE_DEVICES=1 python train_video_vqvae.py --epoch 20000 --max_frame_len 8 --ckpt checkpoint_target_all5losses/vqvae_501.pt,checkpoint_target_all5losses/adversarial_501.pt --validate_at 2048 --epoch 200000
+
+CUDA_VISIBLE_DEVICES=0 python train_video_vqvae.py --epoch 20000 --max_frame_len 8 --ckpt checkpoint_target_all5losses/vqvae_5301.pt,checkpoint_target_all5losses/adversarial_5301.pt --validate_at 2048 --epoch 200000
+
+CUDA_VISIBLE_DEVICES=2 python train_video_vqvae.py --max_frame_len 8 --ckpt checkpoint_vlog_all5losses/vqvae_5401.pt,checkpoint_vlog_all5losses/adversarial_5401.pt 
+
+
+CUDA_VISIBLE_DEVICES=2 python train_video_vqvae_nta.py --max_frame_len 8 --ckpt multi_005.pt --validate_at 512 --epoch 200000
