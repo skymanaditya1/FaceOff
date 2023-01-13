@@ -27,9 +27,6 @@ sample_size = SAMPLE_SIZE_FOR_VISUALIZATION
 dataset = DATASET
 
 BASE = '/ssd_scratch/cvit/aditya1/video_vqvae2_results'
-# sample_folder = '/home2/bipasha31/python_scripts/CurrentWork/samples/{}'
-
-# checkpoint_dir = 'checkpoint_{}'
 
 def run_step(model, data, device, run='train'):
     img, S, ground_truth, source_images_original = process_data(data, device, dataset)
