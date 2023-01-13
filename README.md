@@ -2,7 +2,7 @@
 
 [Aditya Agarwal](http://skymanaditya1.github.io/)<sup>\*1</sup>,
 [Bipasha Sen](https://bipashasen.github.io/)<sup>\*1</sup>,
-[Rudrabha Mukhopadhyay](https://rudrabha.github.io/)<sup>1<sup>,
+[Rudrabha Mukhopadhyay](https://rudrabha.github.io/)<sup>1</sup>,
 [Vinay Namboodiri](https://vinaypn.github.io/)<sup>2</sup>,
 [C V Jawahar](https://faculty.iiit.ac.in/~jawahar/)<sup>1</sup><br>
 <sup>1</sup>International Institute of Information Technology, Hyderabad, <sup>2</sup>University of Bath
@@ -13,11 +13,16 @@ This is the official implementation of the paper "FaceOff: A Video-to-Video Face
 
 For more results, information, and details visit our [**project page**](http://cvit.iiit.ac.in/research/projects/cvit-projects/faceoff) and read our [**paper**](https://openaccess.thecvf.com/content/WACV2023/papers/Agarwal_FaceOff_A_Video-to-Video_Face_Swapping_System_WACV_2023_paper.pdf)). Following are some outputs from our network on the V2V Face Swapping Task.
 
-<img src="./results/v2v_results2.gif">
+<img src="./results/v2v_results3.gif">
 <img src="./results/v2v_results4.gif">
 <img src="./results/v2v_more_result.gif">
 
-First and the last column are videos from the training dataset, the intermediate videos are generated using INR-V by interpolating in the learned latent space. We can see a smooth transition in content (identity, ornaments, spectacles) and motion (pose, mouth movements). 
+## Results on same identity
+<img src="./results/v2v_same_identity2.gift">
+
+## Comparisons 
+<img src="./results/v2v_comparisons1.gif">
+<img src="./results/v2v_comparisons31.gif">
 
 ## Getting started
 
@@ -29,6 +34,8 @@ First and the last column are videos from the training dataset, the intermediate
     ```
 
 ## Training FaceOff
+
+<img src="./results/training_pipeline.gif">
 
 The following command trains the V2V Face Swapping network. At set intervals, it will generate the data on the validation dataset.
 
