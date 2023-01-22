@@ -73,6 +73,9 @@ All the values can be left at their default values to train FaceOff in the vanil
 CUDA_VISIBLE_DEVICES=0,1,2,3 python train_faceoff_perceptual.py
 ```
 
+## Checkpoints 
+Pretrained checkpoints would be released soon!
+
 ## We would love your contributions to improve FaceOff
 
 FaceOff introduces the novel task of Video-to-Video Face Swapping that tackles a pressing challenge in the moviemaking industry: swapping the actor's face and expressions on the face of their body double. Existing face-swapping methods swap only the identity of the source face without swapping the source (actor) expressions which is undesirable as the starring actor's source expressions are paramount. In video-to-video face swapping, we swap the source's facial expressions along with the identity on the target's background and pose. Our method retains the face and expressions of the source actor and the pose and background information of the target actor. Currently, our model has a few limitations. ***we would like to strongly encourage contributions and spur further research into some of the limitations listed above.***
